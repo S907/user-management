@@ -1,0 +1,115 @@
+<%- include('layouts/header') %>
+
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('layouts/sidebar') %>
+
+
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <%- include('layouts/topnav') %>
+
+
+                            <!-- Begin Page Content -->
+                            <div class="container-fluid">
+
+                                <!-- Page Heading -->
+                                <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                                    <h1 class="h3 mb-0 text-gray-800">FAQ</h1>
+                                </div>
+
+                                <!--Form Begin-->
+
+                                <div class="container d-sm-flex align-items-center justify-content-center mb-4">
+                                    <div class="card" style="width: 50rem;">
+                                        <div class="card-body">
+
+                                            <p class="card-text">
+                                            <div class="row ">
+                                                <div class="col-lg-7 mx-auto">
+                                                    <div class="card mt-2 mx-auto p-4 bg-light">
+                                                        <div class="card-body bg-light">
+
+                                                            <div class="container">
+                                                                <form action="/admin//post-faq" method="post"
+                                                                    id="contact-form" role="form">
+                                                                    <div class="controls">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="form_name">Question
+                                                                                    </label>
+                                                                                    <input id="question" type="text"
+                                                                                        name="question"
+                                                                                        class="form-control"
+                                                                                        required="required"
+                                                                                        data-error="Question is required.">
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="form_lastname">Answer
+                                                                                        *</label>
+                                                                                    <input id="answer" type="text"
+                                                                                        name="answer"
+                                                                                        class="form-control"
+                                                                                        required="required"
+                                                                                        data-error="Answer is required.">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                
+                                                                                <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
+                                                                      " value="Send">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--Form end-->
+                            </div>
+                            <!-- /.container-fluid -->
+
+                    </div>
+                    <!-- End of Main Content -->
+
+
+                    
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+
+        <%- include('layouts/footer') %>

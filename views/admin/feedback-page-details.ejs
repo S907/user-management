@@ -1,0 +1,110 @@
+<%- include('layouts/header')%>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <%- include('layouts/sidebar')%>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <%- include('layouts/topnav')%>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="container d-sm-flex align-items-center justify-content-center mb-4">
+                        
+                        <h1 class="h3 mb-4 text-gray-800">Feedback Details</h1>
+                    </div>
+                    <!-- <a href="/admin/blog-form" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add User</a> -->
+
+                </div>
+                <!-- /.container-fluid -->
+
+                <div class="container">
+
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        
+                    </div>
+            
+                </div>
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6><br>
+                        <h6><a href="/admin/feedback-page">Add Feedback</a></h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Serial No.</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Message</th>
+                                        
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% let i=0; response.map(data=> { %>
+                                        <tr>
+                                            <td>
+                                                <%= ++i %>
+                                            </td>
+                                           <td>
+                                                <%= data.firstName %>
+                                            </td>
+                                            <td>
+                                                <%= data.lastName%>
+                                            </td>
+                                            <td>
+                                                <%= data.feedback%>
+                                            </td>
+                                            <td><a href="/admin/edit-feedback/<%= data._id %>">Edit</a></td>
+                                            <td><a href="/admin/delete-feedback/<%= data._id %>">Delete</a></td>
+                                        </tr>
+                                        <% }) %>
+                                </tbody>    
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+  
+<%- include('layouts/footer')%>

@@ -1,0 +1,157 @@
+<%- include('layouts/header') %>
+
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('layouts/sidebar') %>
+
+
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <%- include('layouts/topnav') %>
+
+
+                            <!-- Begin Page Content -->
+                            <div class="container-fluid">
+
+                                <!-- Page Heading -->
+                                <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                                    <h1 class="h3 mb-0 text-gray-800">Blogs List</h1>
+                                    
+                                </div>
+                                <!-- Content Row -->
+                                <div class="row">
+
+                                    <!-- Listing Code -->
+                                    <!-- Content Wrapper -->
+                                    <div id="content-wrapper" class="">
+
+                                        <!-- Main Content -->
+                                        <div id="content">
+
+                                            <!-- Topbar -->
+                                            <nav
+                                                class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                                            <h2> Blog Table </h2>
+                                            
+
+                                                <!-- Topbar Navbar -->
+                                                <ul class="navbar-nav ml-auto">
+
+                                                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                                                    <li class="nav-item dropdown no-arrow d-sm-none">
+                                                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown"
+                                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-search fa-fw"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </nav>
+                                            <!-- End of Topbar -->
+
+                                            <!-- Begin Page Content -->
+                                            <div class="container-fluid">
+                                                <!-- DataTales Example -->
+                                                <div class="card shadow mb-4">
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary">Blogs
+                                                        </h6>
+                                                        <br>
+                                                        <h6><a href="/admin/blog-page">Add Content</a></h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered" id="dataTable"
+                                                                width="100%" cellspacing="0">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>Image</th>
+                                                                        <th>Title</th>
+                                                                        <th>Publishing Date</th>
+                                                                        <th>Writer</th>
+                                                                        <th>Content</th>
+                                                                        <th>Edit</th>
+                                                                        <th>Delete</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <% blogData.map((data,index)=> { %>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <%= ++index %>
+                                                                            </td>
+                                                                            <td><img src="/uploads/<%= data.image %>" alt="Images" width="100px" height="130px"></td>
+                                            <td>
+                                                                            <td>
+                                                                                <%= data.title %>
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= data.date %>
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= data.writer %>
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= data.blog %>
+                                                                            </td>
+                                                                            <td><a href="/admin/blog-edit/<%= data._id %>">Edit</a>
+                                                                            </td>
+                                                                            <td><a
+                                                                                    href="/admin/blog-delete/<%= data._id %>">Delete</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <% }) %>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- /.container-fluid -->
+
+                                        </div>
+                                        <!-- End of Main Content -->
+
+                                    </div>
+                                    <!-- End of Content Wrapper -->
+
+                                </div>
+                                <!-- End of Page Wrapper -->
+
+                                <!-- Scroll to Top Button-->
+                            
+
+
+
+                                <!-- Listing Code Ends -->
+
+
+                               
+                            </div>
+                            <!-- End of Content Wrapper -->
+
+                    </div>
+                    <!-- End of Page Wrapper -->
+
+                    <!-- Scroll to Top Button-->
+                    <a class="scroll-to-top rounded" href="#page-top">
+                        <i class="fas fa-angle-up"></i>
+                    </a>
+                </div>
+        </div>
+
+    </body>
+
+    <%- include('layouts/footer') %>

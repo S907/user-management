@@ -1,0 +1,110 @@
+<%- include('layouts/header') %>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <%- include('layouts/sidebar') %>
+
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <%- include('layouts/topnav') %>
+
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">User Form</h1>
+                            </div>
+
+                            <!--Form Begin-->
+
+                            <div class="row d-sm-flex align-items-center justify-content-center mb-4">
+                                
+                                <div class="col-lg-7">
+                                    <div class="p-5">
+                                        <div class="text-center">
+                                            <h1 class="h4 text-gray-900 mb-4">Add User Form</h1>
+                                        </div>
+                                        <form class="text-center" method="post" action="/admin/postuserdetails" enctype="multipart/form-data">
+                                            <div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-user" id="exampleFirstName" name="firstName" 
+                                                        placeholder="First Name">
+
+                                                </div>
+                                                 
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-user" id="exampleLastName" name="lastName"
+                                                        placeholder="Last Name">
+                                                </div>
+                                                
+                                            </div>
+                                            <div>
+                                                <div class="form-group">
+                                                    <input type="file" class="form-control form-control-user" id="exampleInputEmail" name="image"
+                                                        placeholder="Image">
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- <div class="form-group">
+                                                <select class="form-select" aria-label="Default select example" name="role">
+                                                    <option selected>Select Option</option>
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="User">User</option>
+                                                    
+                                                  </select>
+                                            </div> -->
+            
+                                            <div class="form-group">
+                                                <input type="email" class="form-control form-control-user" id="exampleInputEmail" name="email"
+                                                    placeholder="Email Address">
+                                            </div>
+                                           
+            
+                                            
+                                           
+                                            
+                                            
+                                                <input type="submit" value="Submit Details" class="btn btn-primary btn-user btn-block">
+                                            <hr>
+                                           
+                                        </form>
+                                        <hr>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Form end-->
+                        </div>
+                        <!-- /.container-fluid -->
+
+                </div>
+                <!-- End of Main Content -->
+
+
+                
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <%- include('layouts/footer') %>

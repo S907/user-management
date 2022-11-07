@@ -1,0 +1,99 @@
+<%- include('layouts/header')%>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+     <%- include('layouts/sidebar')%>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content text-center">
+
+                <%- include('layouts/topnav')%>
+                <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Edit Contact Page</h1>
+                    
+                </div>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid d-sm-flex align-items-center justify-content-center mb-4">
+
+                    <!-- Page Heading -->
+                   
+
+                    <!-- Content Row -->
+                    <div class="controls">
+
+                        <form class="form-group column" method="post" action="/admin/post-contact-edit-page">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleFirstName" name="firstName" 
+                                        placeholder="First Name" value="<%=response.firstName%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleLastName" name="lastName"
+                                        placeholder="Last Name" value="<%=response.lastName%>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="story">Tell us your Message:</label>
+                                        <input class="col-sm-6" type="text" name="message" id="" value="<%=response.message%>"> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                          
+                            
+                            
+                    
+                            <input type="text" name="id" id="" value="<%=response._id%>">
+                                <input type="submit" value="Send Message" class="btn btn-primary btn-user btn-block">
+                            <hr>
+                        </form>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    
+
+                    <!-- Content Row -->
+                    
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+           <%- include('layouts/site-footer')%>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    
+<%- include('layouts/footer')%>
